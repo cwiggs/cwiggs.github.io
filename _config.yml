@@ -3,15 +3,15 @@ permalink:        pretty
 relative_permalinks: true
 
 # Setup
-title:            Poole
-tagline:          The Jekyll Butler
-url:              http://getpoole.com
+title:            cwiggs.github.io
+tagline:          Cwiggs Personal site
+url:              http://cwiggs.github.io
 paginate:         1
 baseurl:          /
 author:
-  name:           Mark Otto
-  url:            https://twitter.com/mdo
-  email:          markdotto@gmail.com
+  name:           Chris Wiggins
+#  url:            https://twitter.com/mdo
+  email:          chrisonline1991@gmail.com
 
 # Custom vars
 version:          1.0.0
