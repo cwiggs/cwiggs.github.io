@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="UTF-8">
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      cwiggs.github.io &middot; Cwiggs Personal site
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/atom+xml" title="cwiggs.github.io" href="/atom.xml">
+</head>
+
+
+  <body>
+    <div class="container content">
+      <header class="masthead">
+        <h3 class="masthead-title">
+          <a href="/" title="Home">cwiggs.github.io</a>
+
+		
+			&nbsp;&nbsp;&nbsp;
+			<small><a href="/about">About</a></small>
+		
+			&nbsp;&nbsp;&nbsp;
+			<small><a href="/archive">Archive</a></small>
+		
+			&nbsp;&nbsp;&nbsp;
+			<small><a href="/atom.xml">Feed</a></small>
+		
+
+        </h3>
+      </header>
+
+      <main>
+        <div class="posts">
+  
+  <article class="post">
+    <h1 class="post-title">
+      <a href="/2015/02/18/Problem-With-Installing-Jekyll-In-Linux-Mint-17/">
+        Problem With Installing Jekyll In Linux Mint 17
+      </a>
+    </h1>
+
+    <time datetime="2015-02-18T00:00:00-07:00" class="post-date">18 Feb 2015</time>
+
+    <p>This site is ran using Jekyll and is hosted on Github pages. I used <a href="https://help.github.com/articles/using-jekyll-with-pages/">this</a> guide to help me setup Jekyll.  I wanted to be able to host the site locally and see what the changes look like before i publish them.  That guide is pretty straight forward but here are a few problems i ran into:</p>
+
+<h3 id="installing-jekyll">Installing Jekyll</h3>
+
+<p>On the github pages that explains how to install Jekyll, step 3 says to create the Gemfile and run <code>bundle install</code> and you’re good to go; not the case in Linux Mint 17. It seems there is a problem with nokogiri.  The problem is it’s missing some dependencies and when you try to install nokogiri via bundle it tries to install it’s own version of the depencies, but fails for some reason.  I fixed it by installing these packages:</p>
+
+<p><code>
+$ sudo apt-get install libxslt-dev libxml2-dev
+</code></p>
+
+<p>Once those are installed you want to tell bundle to use the system libraries by running:</p>
+
+<p><code>
+bundle config build.nokogiri --use-system-libraries
+</code></p>
+
+<p>Then you can run <code>bundle install</code> again and it’ll install Jekyll.</p>
+
+<h3 id="nodejs">Node.js</h3>
+
+<p>another thing that github forgets to explain is that before you can run <code>bundle exec jekyll serve</code> you have to install node.js or bundle will complain that it could not find a JavaScript runtime. To install Node.js, run:</p>
+
+<p><code>
+$ sudo apt-get intall node.js
+</code></p>
+
+<p>Then run <code>bundle exec jekyll serve</code> and you can access your site at ‘http://localhost:4000’.</p>
+
+
+  </article>
+  
+</div>
+
+<div class="pagination">
+  
+    <a class="pagination-item older" href="/page3">Older</a>
+  
+  
+    
+      <a class="pagination-item newer" href="/">Newer</a>
+    
+  
+</div>
+
+      </main>
+
+      <footer class="footer">
+        <small>
+          &copy; <time datetime="2015-02-18T01:49:58-07:00">2015</time>. All rights reserved.
+        </small>
+      </footer>
+    </div>
+
+  </body>
+</html>
