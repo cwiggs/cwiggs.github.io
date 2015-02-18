@@ -10,9 +10,10 @@ A few things about me i'm interested in:
 * Anarcho-Capitalism
 * Minimalism
 * Technology
-** Linux
-** [OSS](http://en.wikipedia.org/wiki/Open-source_software) software
-** Python, PHP
+  * Linux
+  * [OSS](http://en.wikipedia.org/wiki/Open-source_software) software
+  * Python, PHP
+  * Raspberry Pi
 * Philosophy
 * Bicycling
 
