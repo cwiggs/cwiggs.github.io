@@ -3,6 +3,20 @@ layout: page
 title: About
 ---
 
+Hey There!  I'm Chris Wiggins and this site is a place for my personal opinion, projects, ideas, etc.
+
+A few things about me i'm interested in:
+
+* Anarcho-Capitalism
+* Minimalism
+* Technology
+** Linux
+** [OSS](http://en.wikipedia.org/wiki/Open-source_software) software
+** Python, PHP
+* Philosophy
+* Bicycling
+
+
 <p class="message">
   Hey there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!
 </p>
